@@ -200,51 +200,27 @@
           \node[frame, anchor=north, text=blocktitletextcolor] at (box.north)
           {\bf\LARGE What does rescue the voles?};  
  
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    \coordinate (currenty) at ($(box.south)-(yshift)$);
 
-   
-  \blocknodew[($(currenty)-(0,0)$)]{77}{(\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) Modeling Eco-Evolutionary Dynamics}
-		{
-		\vspace{-15pt}	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
-				\parbox{36.8cm}{\center \innerblockplain[colorone]{
-				
-				  \begin{tabular}{p{0.7\textwidth} p{0.3\textwidth}}
-				  \parbox{24.5cm}{
-				  \textbf{\Large \emph{Genetic Integral Projection Models}}\\
-				  $\color{myblue3}{\bullet}$ Elegant demographic analyses\\
-				  $\color{colortwo}{\bullet}$ Limited flexibility\\
-				  $\color{myblue3}{\bullet}$ Exportable to other systems\\
-				  $\color{colortwo}{\bullet}$ Including genetics still challenging}
-				  &
-				  \parbox{12.3cm}{
-				  \includegraphics[width=10cm]{IntegralVole.pdf}
-				  }
-				  \end{tabular}
-				  }}
-				&
-				\parbox{36.8cm}{\center \innerblockplain[colorone]{	
-				  \begin{tabular}{p{0.3\textwidth} p{0.7\textwidth}}
-				   \parbox{12.3cm}{
-				  \includegraphics[width=10cm]{voltrix}
-				    }
-				    &
-				  \parbox{24.5cm}{
-				  \textbf{\Large \emph{Individual Based Simulations}}\\
-				  $\color{myblue3}{\bullet}$ Complete flexibility\\
-				  $\color{colortwo}{\bullet}$ Infinite parameter space\\
-				  $\color{myblue3}{\bullet}$ Testing tool\\				
-				  $\color{colortwo}{\bullet}$ Computationally intensive}
-				  \end{tabular}
-				  }}
-		              	\end{tabular}
-		}
+    \node[anchor=north, rounded corners=15pt, fill=titledrawcolor] (qrw) at ($(currenty) + (-34,0)$) {\includegraphics[width=8cm]{qrwebsite}};
+    \node[anchor=north, rounded corners=15pt, fill=titledrawcolor] (qrgit) at ($(currenty) + (34,0)$) {\includegraphics[width=8cm]{qrgitrepos}};
+    \node[anchor=south] (web) at (qrw.north) {\textbf{\color{colorone!80!black}{More info}}};
+    \node[anchor=south] (git) at (qrgit.north) {\textbf{\color{colorone!80!black}{This \LaTeX code}}};
 		
-  \Endblock{($(currenty)-(0,0)$)}{77}{A few relevant references}{ \small
-	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{Vole evolution:} Bonnet \& al. (2017) Bigger is fitter? Quantitative genetic decomposition of selection reveals an adaptive evolutionary decline of body mass in a wild rodent population. Plos Biology, 15(1).\\
-	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{The animal model:} Henderson (1950) Estimation of genetic parameters. Annals of mathematical statistics, 21(2)\\
-	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{The animal model explained to humans: } Kruuk (2004). Estimating genetic parameters in natural populations using the ``animal model''. Philosophical Transactions of the Royal Society B, 359(1446)\\
-	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{Evolutionary rescue:} Gonzalez \& al. (2013). Evolutionary rescue: an emerging focus at the intersection between ecology and evolution. Philosophical Transactions of the Royal Society B, 368(1610).\\
-	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{IPMs and quantitative genetics:} Childs \& al. (2016). The evolution of labile traits in sex- and age-structured populations. Journal of Animal Ecology, 85(2)
-	}
+		
+   \Endblock{($(web.east)+(2,-5)$)}{61}{\hspace{25cm}Collaborations}{ 
+   
+    \begin{tabular}{p{0.25\textwidth} p{0.25\textwidth} p{0.25\textwidth} p{0.25\textwidth}}
+   \textbf{Loeske Kruuk}   & \textbf{Erik Postma} & \textbf{Arpat Ozgul} 	& \textbf{Caroline Thomson}\\
+   \includegraphics[width=7cm]{Erik} & \includegraphics[width=7cm]{Erik} & \includegraphics[width=7cm]{Erik} &\includegraphics[width=7cm]{Erik}\\
+ 	ANU	  &	Exter Uni (UK)	& UZH (Switzerland)		& P. Sabatier Uni (France)	\\
+
+    \end{tabular}
+
+   
+  }
+	
 \end{tikzpicture}
 \end{document}
