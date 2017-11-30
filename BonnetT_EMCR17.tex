@@ -1,0 +1,250 @@
+% fancytikzposter.tex, version 2.1
+% Original template created by Elena Botoeva [botoeva@inf.unibz.it], June 2012
+% 
+% This file is distributed under the Creative Commons Attribution-NonCommercial 2.0
+% Generic (CC BY-NC 2.0) license
+% http://creativecommons.org/licenses/by-nc/2.0/ 
+\documentclass{a0poster}
+\usepackage[USenglish]{babel}% or british
+\usepackage[T1]{fontenc}
+
+
+\usepackage{wrapfig}
+\usepackage{fancytikzposterM} 
+\usepackage{multirow}
+
+% background picture
+\usebackgroundtemplate{7}
+
+\definecolor{myblue3}{HTML}{0C3E07}%main frames
+
+
+\usepackage[margin=\margin cm, paperwidth=84.1cm, paperheight=118.9cm]{geometry}
+
+
+\usepackage{cmbright}
+%\usepackage[default]{cantarell}
+%\usepackage{avant}
+%\usepackage[math]{iwona}
+\usepackage[math]{kurier}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SET FONT SIZES %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Huge}{\fontsize{64}{85}\selectfont} % Main title
+\renewcommand{\huge}{\fontsize{44}{70}\selectfont} % Sub title
+\renewcommand{\LARGE}{\fontsize{48}{48}\selectfont} % Box headers
+\renewcommand{\Large}{\fontsize{42}{40}\selectfont} % Authors
+\renewcommand{\normalsize}{\fontsize{40}{42}\selectfont} % Text in the boxes
+\renewcommand{\footnotesize}{\fontsize{34}{42}\selectfont} % references
+\renewcommand{\small}{\fontsize{24}{22}\selectfont}
+%% add your packages here
+
+
+%% Set the folder that contains the images
+\graphicspath{ {./Lowres/} }
+
+
+\title{Genetic evolution happens now, and can rescue wild vertebrates from extinction\vspace{-0.2em}}
+\author{{\LARGE{Timoth\'{e}e Bonnet}}\\ \vspace{-20pt} \footnotesize Lecturer at Research School of Biology, ANU College of Science
+\\
+}
+
+\begin{document}
+
+%%%%% ---------- the background picture ---------- %%%%%
+%% to change it modify the macro \BackgroundPicture
+\ClearShipoutPicture
+\AddToShipoutPicture{\BackgroundPicture}
+
+\noindent % to have the picture right in the center
+
+\begin{tikzpicture}
+  \initializesizeandshifts
+  % \setxshift{15}
+  \setyshift{2.5} % uncomment this line to condense the boxes
+
+  \newcommand{\volesize}{0.8cm}
+
+  %% the title block, #1 - shift, the default value is (0,0), #2 - width, #3 - scale
+  %% the alias of the title block is `title', so we can refer to its boundaries later
+  \ifthenelse{\equal{\template}{1}}{ 
+    \titleblock[(-0.7,0)]{48}{1}
+			}{
+    \titleblock[(-10,0)]{87}{1.5}
+			}
+			
+\addlogo[east]{(10,0)}{8cm}{qrwebsite}
+\addlogo[west]{(-10,0)}{8cm}{tim}
+
+\coordinate (aaa) at (currenty);
+
+	\blocknodew[($(currenty)+(19.6,0)$)]{77}{(\includegraphics[width=\volesize]{snowwwvole2}) Responses to environmental changes}
+		{
+		  Environmental changes jointly affect selective pressures, trait expression, and demographic parameters. To predict and mitigate consequences of anthropogenic perturbations, all these aspects should be integrated. The importance of evolution for population dynamics is still not well understood, and empirical studies are badly lacking, because of at least three problems: (\includegraphics[width=\volesize]{snowwwvole2}) population monitoring too short and not detailed enough; (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) scarcity of evidence for adaptive evolution; (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) lack of appropriate statistical framework to jointly model genes and demography. How to tackle these challenges?
+		}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\blocknodew[($(currenty)+(0,0)$)]{77}{(\includegraphics[width=\volesize]{snowwwvole2}) Responses to environmental changes}
+		{
+		  Environmental changes jointly affect selective pressures, trait expression, and demographic parameters. To predict and mitigate consequences of anthropogenic perturbations, all these aspects should be integrated. The importance of evolution for population dynamics is still not well understood, and empirical studies are badly lacking, because of at least three problems: (\includegraphics[width=\volesize]{snowwwvole2}) population monitoring too short and not detailed enough; (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) scarcity of evidence for adaptive evolution; (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) lack of appropriate statistical framework to jointly model genes and demography. How to tackle these challenges?
+		}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\coordinate (tfirstcol) at (currenty);
+	
+	\blocknode[($(currenty)-(19.4,0)$)]{(\includegraphics[width=\volesize]{snowwwvole2}) Snow vole monitoring}
+		{\hspace{-1cm}
+		\begin{tabular}{p{0.75\textwidth} p{0.25\textwidth}}
+		\parbox{27cm}{
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Rock-dwelling rodent, slow pace of life\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Population on isolated scree, Churwalden\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Individual-based monitoring since 2006\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Individual tags and genetic markers\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Morphology, parasites, life-history traits\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Measure fitness, selection, inheritance\\}
+		&
+		\parbox{11cm}{
+		\includegraphics[width=10 cm]{map-1}}
+		
+		\end{tabular}
+		\vspace{-2cm}
+		}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\blocknode[($(tfirstcol)+(19.5,0)$)]{(\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) Evolution in action!}
+		{
+		\hspace{-0.8cm}
+		\begin{tabular}{p{0.25\textwidth} p{0.75\textwidth}}
+		\parbox{9cm}{\vspace{-0.5cm}
+		\includegraphics[width=7 cm]{pedigreeplot}
+		  
+		}
+		&\hspace{-2.5cm}
+		\parbox{29cm}{ \vspace{-1cm}
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Quantitative genetic ``animal models''\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Genetic (co)variances and changes\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Ongoing cryptic genetic decrease in mass\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Not due to drift, but adaptive\\  
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Selective acts during juvenile ontogeny\\
+		\includegraphics[width=1cm]{SnowvoleshadowDark} Maybe related to climatic shift}
+		
+		\end{tabular}
+		\vspace{-1cm}
+		}
+		
+ \coordinate (width) at ($(76.8,0) - (2.1,0)$);   
+ %% the content of the block
+  %% the content of the block
+          \draw let \p1=($(width)-(0,0)$) , \p2=($(0,\blocktitleheight cm)-(0,2.4cm)$)
+          in node[draw, anchor=north, color=blocktitlefillcolor, text=blocktextcolor, 
+          frame, rectanglesplittwo, rectangle split horizontal=false, 
+          rectangle split part fill={blocktitlefillcolor, none}, %
+          rectangle split empty part height= \y2 
+          ]
+          (box) at ($(currenty)-(19.5,0)$) {
+            \nodepart{second}
+            \begin{minipage}{\x1}
+            \begin{center}
+	      \vspace{33cm} % a very mesy trick to control box height...
+            \end{center}
+           \end{minipage}
+          }; 
+          
+                   
+         \node[frame, anchor=west, text=blocktitletextcolor] (clim) at ($(box.west)-(-1,1.5)$) {\includegraphics[width=18cm, ]{Climatic_trend-1}};
+         \node[] (tit1) at ($(clim.north)+(0,0)$) {\textit{Environmental Change}};
+         
+         
+         
+         \node[anchor=west] (dv1) at ($(clim.east)+(2,0)$) {\includegraphics[width=3.5cm]{Deadsnowwwvole2}};
+         \draw[->,line width=5mm] ($(clim.east)+(-1,0)$)--(dv1);
+         \node[anchor=north] (dv2) at ($(dv1.south)+(0,0)$) {\includegraphics[width=3.5cm]{Deadsnowwwvole2}};
+         \node[anchor=south] (dv3) at ($(dv1.north)+(0,0)$) {\includegraphics[width=3.5cm]{Deadsnowwwvole2}};
+         
+         \node[anchor=west] (av1) at ($(dv1.east)+(1,0)$) {\includegraphics[width=2cm]{snowwwvole2}};
+         \node[anchor=west] (av2) at ($(dv2.east)+(1,0)$) {\includegraphics[width=2cm]{snowwwvole2}};
+         \node[anchor=west] (av3) at ($(dv3.east)+(1,0)$) {\includegraphics[width=2cm]{snowwwvole2}};
+          
+         \node[anchor=south] (hs) at ($(dv3.north)+(2,0)$) {\textit{Hard Selection}};
+          
+         \node[frame, anchor=north, text=blocktitletextcolor] (evol) at ($(box.north)+(9,-4)$) {\includegraphics[width=20cm, clip=true,trim=0 0 1 0 ]{EvolSmoothT}};
+         \node[rotate = 90] (leg) at ($(evol.west)+(0.2, 0.5)$) {\small Mass breeding value (g)};
+         \node[] (evtitl) at ($(evol.north)+(0,-0.5)$) {\textit{Adaptive Evolution}};
+    
+         \node[frame, anchor=south, text=blocktitletextcolor] (demo) at ($(box.south)+(9.25,0)$) {\includegraphics[width=20cm, clip=true,trim=0 5 15 0 ]{PopulationTrend-1}};
+         \node[rotate = 90] (leg2) at ($(demo.west)+(0.2, 0.5)$) {\small Number of individuals};
+         \node[anchor=center] (demtitl) at ($(demo.south)+(0,1)$) {\textit{Population Crash and Recovery}};
+
+         
+         \draw[->, line width=5mm] ($(av1.east)+(0,0)$) -- ($(av1.east)+(2,0)$) -- ($(av1.east)+(4,2)$);
+         \draw[->, line width=5mm] ($(av1.east)+(0,0)$) -- ($(av1.east)+(2,0)$) -- ($(av1.east)+(4,-2)$);
+         
+         \node[anchor=south] (demoS) at ($(box.south)+(-15,2)$) {\color{colorone}{\textbf{Demographic Stochasticity}}};
+         \node[anchor=east] (die) at (demoS.west) {\includegraphics[width=4cm]{die.pdf}};
+         \draw[->, line width=3mm, color=colorone, dashed, shorten >= 1cm] (demoS)--(demo);
+         \node[anchor=east] (mv1) at ($(box.east)+(-2.8,-1.5)$) {\includegraphics[width=2.5cm, clip, trim= 1 3 2 1]{snowwwvole2Imm}};
+         \node[anchor=east] (immtit) at ($(box.east)+(-1,1.5)$) {\textit{Immigration}};
+         
+         \draw[->, line width=3mm, color=colorone, dashed] ($(evol.south)+(0.5,1)$)--($(evol.south)+(0.5,-2.5)$);
+         \node[anchor=west] (evor) at ($(evol.south)+(1,-0.5)$) {\color{colorone}{\textbf{Evolutionary Rescue}}};
+
+         \coordinate (c0) at ($(box.east)+(-11,-1.5)$);
+         \draw[->, line width=3mm, color=colorone, dashed] ($(c0)+(5,0)$) -- (c0) -- ($(c0)+(-6,8)$);
+         \draw[->, line width=3mm, color=colorone, dashed] ($(c0)+(5,0)$) -- (c0) -- ($(c0)+(-6,-8)$);
+         
+         \node[anchor=west] (demor) at ($(c0)+(-5.5,-8)$) {\color{colorone}{\textbf{Demographic Rescue}}};
+	 \node[anchor=west] (genor) at ($(c0)+(-5.5,8)$) {\color{colorone}{\textbf{Genetic Rescue}}};
+
+          %% the title of the block
+          \node[frame, anchor=north, text=blocktitletextcolor] at (box.north)
+          {\bf\LARGE What does rescue the voles?};  
+ 
+   \coordinate (currenty) at ($(box.south)-(yshift)$);
+
+   
+  \blocknodew[($(currenty)-(0,0)$)]{77}{(\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) Modeling Eco-Evolutionary Dynamics}
+		{
+		\vspace{-15pt}	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
+				\parbox{36.8cm}{\center \innerblockplain[colorone]{
+				
+				  \begin{tabular}{p{0.7\textwidth} p{0.3\textwidth}}
+				  \parbox{24.5cm}{
+				  \textbf{\Large \emph{Genetic Integral Projection Models}}\\
+				  $\color{myblue3}{\bullet}$ Elegant demographic analyses\\
+				  $\color{colortwo}{\bullet}$ Limited flexibility\\
+				  $\color{myblue3}{\bullet}$ Exportable to other systems\\
+				  $\color{colortwo}{\bullet}$ Including genetics still challenging}
+				  &
+				  \parbox{12.3cm}{
+				  \includegraphics[width=10cm]{IntegralVole.pdf}
+				  }
+				  \end{tabular}
+				  }}
+				&
+				\parbox{36.8cm}{\center \innerblockplain[colorone]{	
+				  \begin{tabular}{p{0.3\textwidth} p{0.7\textwidth}}
+				   \parbox{12.3cm}{
+				  \includegraphics[width=10cm]{voltrix}
+				    }
+				    &
+				  \parbox{24.5cm}{
+				  \textbf{\Large \emph{Individual Based Simulations}}\\
+				  $\color{myblue3}{\bullet}$ Complete flexibility\\
+				  $\color{colortwo}{\bullet}$ Infinite parameter space\\
+				  $\color{myblue3}{\bullet}$ Testing tool\\				
+				  $\color{colortwo}{\bullet}$ Computationally intensive}
+				  \end{tabular}
+				  }}
+		              	\end{tabular}
+		}
+		
+  \Endblock{($(currenty)-(0,0)$)}{77}{A few relevant references}{ \small
+	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{Vole evolution:} Bonnet \& al. (2017) Bigger is fitter? Quantitative genetic decomposition of selection reveals an adaptive evolutionary decline of body mass in a wild rodent population. Plos Biology, 15(1).\\
+	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{The animal model:} Henderson (1950) Estimation of genetic parameters. Annals of mathematical statistics, 21(2)\\
+	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{The animal model explained to humans: } Kruuk (2004). Estimating genetic parameters in natural populations using the ``animal model''. Philosophical Transactions of the Royal Society B, 359(1446)\\
+	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{Evolutionary rescue:} Gonzalez \& al. (2013). Evolutionary rescue: an emerging focus at the intersection between ecology and evolution. Philosophical Transactions of the Royal Society B, 368(1610).\\
+	\includegraphics[width=1cm]{SnowvoleshadowDark} \textit{IPMs and quantitative genetics:} Childs \& al. (2016). The evolution of labile traits in sex- and age-structured populations. Journal of Animal Ecology, 85(2)
+	}
+\end{tikzpicture}
+\end{document}
