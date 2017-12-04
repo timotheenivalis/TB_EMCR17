@@ -49,7 +49,7 @@
 
 
 \title{Genetic evolution, climate change, and wild vertebrates extinction: predicting and caring\vspace{-0.2em}}
-\author{{\LARGE{Dr. Timoth\'{e}e Bonnet \& Prof. Loeske Kruuk}}\\ \vspace{-20pt} \footnotesize Research School of Biology, ANU College of Science
+\author{{\LARGE{Dr. Timoth\'{e}e Bonnet}}\\ \vspace{-20pt} \footnotesize Research School of Biology, ANU College of Science
 \\
 }
 
@@ -77,14 +77,14 @@
     \titleblock[(-10,0)]{87}{1.5}
 			}
 			
-\addlogo[east]{(10,0)}{8cm}{Loeske}
+\addlogo[east]{(10,0)}{8cm}{anu}
 \addlogo[west]{(-10,0)}{8cm}{tim}
 
 \coordinate (aaa) at (currenty);
 
 	\blocknodew[($(currenty)+(19.6,0)$)]{77}{(\includegraphics[width=\volesize]{snowwwvole2}) Human activities modify the environment of many wild animals,\dots}
 		{
-		   \dots threatening some population, and changing selective pressures. Lab experiments show that genetic evolution can be fast enough to rescue populations from extinction, but in nature, we know close to nothing about how and when evolution makes a difference. There are three main problems: (\includegraphics[width=\volesize]{snowwwvole2}) population monitoring are too short and not detailed enough; (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) adaptive evolution impossible to demonstrate without genetic data (expensive) and genetic models (complicated); (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) lack of statistical tools to jointly model genes and demography. How to tackle these challenges? \vspace{-1cm}
+		   \dots threatening animal populations, and changing selective pressures. Lab experiments have shown that genetic evolution can be fast enough to rescue populations from extinction, but in nature, we know close to nothing about how and when evolution makes a difference. There are three main problems: (\includegraphics[width=\volesize]{snowwwvole2}) Population monitoring are too short and not detailed enough; (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) Adaptive evolution is impossible to demonstrate without genetic data (expensive) and genetic models (complicated); (\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}\includegraphics[width=\volesize]{snowwwvole2}) A lack of tools to jointly model genes and demography. How to tackle these challenges? \vspace{-0.8cm}
 		}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -157,7 +157,7 @@
            \\Apparent selection may not predict evolution well.\\
            \\Phenotypic data are necessary but insufficient to predict evolution}}};
                     
-	  \node[anchor=south east,  draw=colorone!70!black] (text1) at ($(box.south east)+(-0.5,3)$) {\parbox{24cm}{\textbf{\color{colorone!70!black}{Rapid genetic evolution over a few generations, related to climate change.\\ \textit{How common is it?}}}}};
+	  \node[anchor=south east,  draw=colorone!70!black] (text1) at ($(box.south east)+(-0.5,3)$) {\parbox{24cm}{\textbf{\color{colorone!70!black}{Genetic evolution over a few generations, related to climate change.\\ \textit{How common is it?}}}}};
 	  
    \coordinate (currenty) at ($(box.south)-(yshift)$);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,8 +184,8 @@
           \node[anchor=north] (evolution) at ($(box2.north)+(0,-3)$) {\textbf{\LARGE Evolution}};
           \node[anchor=south] (demography) at ($(box2.south)+(0,0)$) {\textbf{\LARGE Demography}};
 	  
-	  \draw[->, line width=0.4cm, color = colorone!70!black] ($(evolution.south)-(0.5,0)$) -- ($(demography.north)-(0.5,0)$);
-	  \draw[<-, line width=0.4cm, color = colorone!95!white] ($(evolution.south)+(0.5,0)$) -- ($(demography.north)+(0.5,0)$);
+	  \draw[->, line width=0.4cm, color = colorone!70!black] ($(evolution.south)-(0.5,1)$) -- ($(demography.north)-(0.5,0)$);
+	  \draw[<-, line width=0.4cm, color = colorone!95!white] ($(evolution.south)+(0.5,0)$) -- ($(demography.north)+(0.5,1)$);
           
           \node[anchor=east, draw=colorone!70!black] (rescue) at ($(box2.west)+(38,0)$) {\parbox{16cm}{\color{colorone!70!black}{\textbf{\textit{How fast can adaptation up-bend population growth rate? When?}}}}};
           
@@ -195,7 +195,12 @@
           
           \node[anchor=west, draw=colorone!95!white] (oppsel) at ($(box2.west)+(39,0)$) {\parbox{16cm}{\color{colorone!95!white}{\textbf{\textit{Does the opportunity for selection increase when populations crash?}}}}};
           
-          \node[anchor=north east] (reiss) at ($(box2.north east)+(-1,-3)$) {\includegraphics[width=18cm]{reissexpected}};
+          \node[anchor=north east] (reiss) at ($(box2.north east)+(0,-5)$) {\includegraphics[width=20cm]{reissexpected}};
+          
+          %\node[anchor=south east] (theory) at ($(box2.north east)+(-1,-6)$) {};
+          \node[anchor=south east, draw=black] (metaana) at ($(box2.south east)+(-0.5,2)$) {\parbox{32cm}{Theoretical expectation\\But relies on mathematical models \\ \textbf{Meta-analysis to confirm pattern empirically}}};
+          
+          \node[anchor=south west, draw=black] (demograph) at ($(box2.south west)+(0.5,2)$) {\parbox{32cm}{Evolution can rescue populations\\ Cannot be sure without knowing nature of selection\\ \textbf{Needs long(er)-term data}}};
           
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    \coordinate (currenty) at ($(box2.south)-(yshift)$);
@@ -208,15 +213,14 @@
 
 		
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
-   \Endblock{($(web.east)+(0.3,-6)$)}{61}{\hspace{25cm}\color{colorone}{Collaborations}}{ 
-   \vspace{-1cm}
-    \begin{tabular}{c c c c c}%p{0.25\textwidth} p{0.25\textwidth} p{0.25\textwidth} p{0.25\textwidth}}
-   \textbf{Prof. Loeske Kruuk}   & \textbf{Dr. Erik Postma} & \textbf{Prof. Arpat Ozgul} 	& \textbf{Dr. Caroline Thomson}\\
-   \includegraphics[width=7cm]{Loeske} & \includegraphics[width=7cm]{Erik} & \includegraphics[width=7cm]{Erik} &\includegraphics[width=7cm]{Erik}\\
- 	ANU	  &	Exter Uni (UK)	& UZH (Switzerland)		& P. Sabatier Uni (France)	\\
+   \Endblock{($(web.east)+(2,-4)$)}{61}{\hspace{25cm}\color{colorone}{Collaborations}}{ 
+   
+    \begin{tabular}{|l l |c| l l|}%p{0.25\textwidth} p{0.25\textwidth} p{0.25\textwidth} p{0.25\textwidth}}
+    \textbf{Prof. Loeske Kruuk} & ANU, Australia & & \textbf{Prof. Andrew Cockburn} & ANU, Australia\\
+   \textbf{Dr. Erik Postma}   & University of Exeter, UK& & \textbf{Prof. Arpat Ozgul} 	& Uni. Zurich, Switzerland\\
+  \textbf{Dr. Caroline Thomson}& University P. Sabatier, France	 & & \textbf{Dr. Michael Morrissey} & St. Andrew University, UK\\
 
     \end{tabular}
-
    
   }
 	
